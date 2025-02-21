@@ -1,0 +1,65 @@
+// COLOR VARIABLES
+$color-primary: #0DA7A2;
+$color-primary-light:#10C9C3;
+
+
+
+$color-black: #030303;
+$color-white: #ffffff;
+
+
+// FONT VARIABLES
+$font-primary: 'Satoshi', sans-serif;
+$font-secondary: "Boska", sans-serif;
+$font-display: 'Glacial Indifference', sans-serif;
+
+@font-face {
+    font-family: 'Boska';
+    src: url('../fonts/Boska-Variable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Boska';
+    src: url('../fonts/Boska-VariableItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Big Screen (256rem - 144rem) */
+@media screen and (min-width: 144.1rem) {
+
+}
+
+/* Tablet & Desktop (119.9rem - 76.8rem) */
+@media screen and (min-width: 76.8rem) and (max-width: 119.9rem) {
+
+}
+
+/* Mobile (76.7rem - 32rem) */
+@media screen and (max-width: 76.7rem) {
+ 
+}
+
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body{
+    font-family: $font-primary;
+    font-weight: 300;
+    line-height: 1.6;
+}

@@ -1,0 +1,142 @@
+%heading{
+    font-family: $font-display;
+}
+.heading-1{
+    @extend %heading;
+    font-size: 8.8rem;
+    color: $color-white;
+    font-weight: 400;
+}
+
+.heading-2{
+    @extend%heading;
+    font-size: 7.2rem;
+    font-weight: 400;  
+}
+
+.heading-3{
+    @extend%heading;
+    font-size: 5.6rem;
+    font-weight: 400; 
+}
+
+.heading-4{
+    @extend%heading;
+    font-size: 4rem;
+    font-weight: 400; 
+}
+
+.heading-5{
+    @extend%heading;
+    font-weight: 400;
+    font-size: 3.2rem;
+}
+
+.heading-6{
+    @extend%heading;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 3.168rem;
+}
+
+
+// BODY
+// 1. Variabel Font
+$font-primary: 'Satoshi', sans-serif;
+
+$font-sizes: (
+  "big": 2.4rem,
+  "xl": 2rem,
+  "lg": 1.8rem,
+  "md": 1.6rem,
+  "sm": 1.4rem,
+  "xs": 1.2rem
+);
+
+$font-weights: (
+  "bold": 700,
+  "medium": 500,
+  "regular": 400
+);
+
+
+// 2. Font Styling
+.body-sm-medium{
+    font-size: map-get($font-sizes, "sm"); // Mengambil font size dari map
+    font-weight: map-get($font-weights, "medium"); // Mengambil font weight dari map
+    font-family: $font-primary;
+    line-height: 2.24rem; 
+}
+.body-xl-bold {
+    font-size: map-get($font-sizes, "xl"); // Mengambil font size dari map
+    font-weight: map-get($font-weights, "bold"); // Mengambil font weight dari map
+    font-family: $font-primary;
+    line-height: 1.5rem;
+}
+.body-xl-medium {
+    font-size: map-get($font-sizes, "xl"); // Mengambil font size dari map
+    font-weight: map-get($font-weights, "medium"); // Mengambil font weight dari map
+    font-family: $font-primary;
+    line-height: 3.2rem;
+}
+.body-xl-regular {
+    font-size: map-get($font-sizes, "xl"); // Mengambil font size dari map
+    font-weight: map-get($font-weights, "regular"); // Mengambil font weight dari map
+    font-family: $font-primary;
+    line-height: 3.2rem;
+}
+.body-big-regular {
+    font-size: map-get($font-sizes, "big"); // Mengambil font size dari map
+    font-weight: map-get($font-weights, "regular"); // Mengambil font weight dari map
+    font-family: $font-primary;
+    line-height: 3.84rem;
+}
+.body-md-regular {
+    font-size: map-get($font-sizes, "md"); // Mengambil font size dari map
+    font-weight: map-get($font-weights, "regular"); // Mengambil font weight dari map
+    font-family: $font-primary;
+    line-height: 2.56rem;
+    color: rgba(97, 97, 97, 1)
+}
+.body-md-bold {
+    font-size: map-get($font-sizes, "md"); // Mengambil font size dari map
+    font-weight: map-get($font-weights, "bold"); // Mengambil font weight dari map
+    font-family: $font-primary;
+    line-height: 2.56rem;
+    color: rgba(97, 97, 97, 1)
+}
+
+
+
+// BOSKA
+$font-secondary: "Boska", sans-serif;
+
+$font-sizes-boska: (
+  "lg": 8.2rem,
+  "md": 7.2rem
+);
+
+$font-weights: (
+  "bold": 700,
+  "medium": 500,
+  "regular": 400
+);
+
+// Font styling
+.boska-lg-bold{
+    font-size: map-get($font-sizes-boska, "lg");
+    font-weight: map-get($font-weights, "bold");
+    font-family: $font-secondary;
+    font-style: italic;
+}
+
+.boska-md-bold{
+    font-size: map-get($font-sizes-boska, "md");
+    font-weight: map-get($font-weights, "bold");
+    font-family: $font-secondary;
+    font-style: italic;
+}
+
+
+
+  

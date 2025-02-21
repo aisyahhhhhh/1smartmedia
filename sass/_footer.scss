@@ -1,0 +1,149 @@
+.footer{
+    // width: 144rem;
+    height: 60.4rem;
+}
+
+.nav{
+    width: 100%;
+    height: 15.4rem;
+
+    display: flex;
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+   
+    &__link{
+        color: rgba(97, 97, 97, 1);
+        text-decoration: none; 
+            
+        &-about{
+            color: $color-primary-light;
+
+        }
+    }
+    
+
+    &__item {
+        position: relative;
+        padding: 0 1rem;
+    }
+    
+    &__item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: -20%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 7.4rem;
+        background-color:rgba(224, 224, 224, 1)
+    }
+}
+
+.contacts{
+    width: 144rem;
+    height: 34.4rem;
+    position: relative;
+
+    &::before { 
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/pattern_footer.png);
+        background-size: cover;
+        z-index: 1; 
+
+        display: flex;
+        justify-content: end;
+    
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        opacity: 40%;
+    }
+
+    &__grid{
+        display: flex;
+        justify-content: space-between;
+        z-index: 3;
+        position: relative;
+        padding: 7.2rem 8rem;
+
+        &-left{
+            width: 51.9rem;
+            height: 20rem;
+            p{
+                color:rgba(97, 97, 97, 1);
+                margin-bottom: 2rem;
+            }
+
+            &--text{
+                width: 24.8rem;
+                height: 12rem;
+                gap: 1.6rem;
+                padding-top: 3rem;
+
+            }
+        }
+    }
+}
+
+
+
+.icon {
+    display: flex;
+    gap: 1rem; 
+
+    &__bg {
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(245, 245, 245, 1);
+        border-radius: 50%; 
+    }
+
+    svg {
+        width: 2.13rem;
+        height: 2.13rem;
+    }
+}
+
+
+.copyright{
+    width: 100%;
+    height: 10.6rem;
+    padding: 0 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    letter-spacing: 0%;
+    color: peru;
+
+    border-top: 1px solid #E0E0E0;
+    
+    &__link{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__right{
+
+        &-text{
+            display: flex;
+            list-style: none;
+            gap: 4rem;
+
+
+        }
+
+    }
+}

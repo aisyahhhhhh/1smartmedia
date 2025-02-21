@@ -1,0 +1,77 @@
+.create{
+    position: relative;
+    height: 63.8rem;
+
+    &::before { 
+        content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("../img/create-pattern.png") no-repeat center bottom;
+            background-size: contain;
+            z-index: 1;
+    }
+
+
+    &__bg {
+        background-image: url('../img/create-bg.jpeg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    &__bg::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(2, 28, 27, 0.88); 
+    }
+
+    &__title{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        justify-content: center;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        gap: 5rem;
+        text-align: center;
+        z-index: 2;
+        color: $color-white;
+
+        span{
+            line-height: 9.5rem;
+            letter-spacing: -3%;
+        }
+    }
+
+    &__btn{
+        text-decoration: none;
+        background-color: $color-primary;
+        color: $color-white;
+        width: 25.6rem;
+        height: 8rem;
+        border-radius: 10rem;
+        padding: 2.4rem 4.8rem;
+        gap: .8rem;
+
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        white-space: nowrap;
+        overflow: hidden;
+
+    }  
+}
