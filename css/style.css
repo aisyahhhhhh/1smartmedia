@@ -29,7 +29,6 @@ html {
 body {
   font-family: "Satoshi", sans-serif;
   font-weight: 300;
-  line-height: 1.6;
 }
 
 .heading-6, .heading-5, .heading-4, .heading-3, .heading-2, .heading-1 {
@@ -201,6 +200,11 @@ body {
   background-color: #030303;
   position: relative;
 }
+@media screen and (max-width: 767px) {
+  .hero {
+    max-height: 55rem;
+  }
+}
 .hero::before {
   content: "";
   position: absolute;
@@ -210,35 +214,41 @@ body {
   height: 100%;
   background: url(../img/header-pattern.png) no-repeat center bottom;
   background-size: contain;
-  z-index: 1;
+  z-index: 0;
 }
 
 .header {
+  height: 100vh;
   width: 100%;
-  max-width: 106rem;
-  height: 100%;
   max-height: 31.4rem;
-  padding-top: 13.8rem;
+  max-width: 106rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  position: absolute;
+  top: 13.8rem;
+  left: 50%;
+  transform: translateX(-50%); /* Hanya geser secara horizontal */
 }
 @media screen and (max-width: 767px) {
   .header {
-    max-width: 34.3rem;
     max-height: 23.3rem;
-    padding-top: 10.4rem;
+    max-width: 34.3rem;
+    top: 10.4rem;
   }
 }
 .header__title-our {
+  justify-content: center;
+  text-align: center;
   color: #0DA7A2;
   z-index: 2;
+  line-height: 4.992rem;
 }
 @media screen and (max-width: 767px) {
   .header__title-our {
     font-size: 2.4rem;
+    line-height: 3.168rem;
   }
 }
 .header__title-era {
@@ -246,10 +256,12 @@ body {
   text-align: center;
   text-wrap: balance;
   z-index: 2;
+  line-height: 11.16rem;
 }
 @media screen and (max-width: 767px) {
   .header__title-era {
     font-size: 4.8rem;
+    line-height: 6.336rem;
   }
 }
 .header__title-era span {
@@ -286,10 +298,50 @@ body {
   flex-direction: column;
   padding: 0 8rem;
   padding-top: 16rem;
+  /* Mobile (76.7rem - 32rem) */
+}
+@media screen and (max-width: 767px) {
+  .about__title {
+    padding-top: 4.8rem;
+    padding: 0 1.6rem;
+  }
+}
+.about__title-mini {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.about__title-mini::before {
+  content: "";
+  height: 2px;
+  width: 3.2rem;
+  display: block;
+  background-color: #10C9C3;
+}
+@media screen and (max-width: 767px) {
+  .about__title-mini--text {
+    font-size: 2rem;
+  }
+}
+.about__title-who--text {
+  /* Mobile (76.7rem - 32rem) */
+}
+@media screen and (max-width: 767px) {
+  .about__title-who--text {
+    font-size: 3.2rem;
+  }
 }
 .about__grid {
   display: flex;
   margin: 0 8rem;
+  /* Mobile (76.7rem - 32rem) */
+}
+@media screen and (max-width: 767px) {
+  .about__grid {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1.6rem;
+  }
 }
 .about__paragraph {
   display: flex;
@@ -298,6 +350,13 @@ body {
   height: 51rem;
   gap: 2.4rem;
   margin-top: 3rem;
+  /* Mobile (76.7rem - 32rem) */
+}
+@media screen and (max-width: 767px) {
+  .about__paragraph {
+    margin-top: 0;
+    height: auto;
+  }
 }
 .about__paragraph-overview--number {
   color: #0DA7A2;
@@ -305,12 +364,36 @@ body {
 .about__paragraph-overview--number span {
   color: rgb(36, 36, 36);
 }
-.about__img {
+.about__wrapper {
   width: 94.2rem;
   height: 50.2rem;
   border-radius: 0.8rem;
   margin-top: 3.3rem;
   margin-left: 5rem;
+  position: relative;
+  overflow: hidden; /* Mencegah gambar keluar dari wrapper */
+}
+@media screen and (max-width: 767px) {
+  .about__wrapper {
+    width: 90%; /* Menggunakan persentase agar lebih fleksibel */
+    height: auto; /* Biarkan tinggi mengikuti aspek rasio */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.about__wrapper-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Menjaga gambar tetap utuh dan memenuhi container */
+}
+.about__text {
+  /* Mobile (76.7rem - 32rem) */
+}
+@media screen and (max-width: 767px) {
+  .about__text {
+    font-size: 1.6rem;
+    line-height: 2.56rem;
+  }
 }
 
 .value {

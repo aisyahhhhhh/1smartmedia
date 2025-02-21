@@ -26,11 +26,54 @@
         flex-direction: column;
         padding: 0 8rem;
         padding-top: 16rem;
+
+        /* Mobile (76.7rem - 32rem) */
+        @media screen and (max-width: 767px) {
+            padding-top: 4.8rem;
+            padding: 0 1.6rem;
+        }
+
+        &-mini{
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+
+            &::before{
+                content: "";
+                height: 2px;
+                width: 3.2rem;
+                display: block;
+                background-color: $color-primary-light;
+            }
+
+            &--text{
+                @media screen and (max-width: 767px) {
+                    font-size: 2rem ;
+                }
+            }
+        }
+
+        &-who{
+            &--text{
+                /* Mobile (76.7rem - 32rem) */
+                @media screen and (max-width: 767px) {
+                    font-size: 3.2rem;
+                }
+            }
+        }
     }
 
     &__grid{
         display: flex;
         margin: 0 8rem;
+
+        /* Mobile (76.7rem - 32rem) */
+        @media screen and (max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+            margin: 0 1.6rem;
+        }
+
     }
 
     &__paragraph{
@@ -40,6 +83,13 @@
         height: 51rem;
         gap: 2.4rem;
         margin-top: 3rem;
+
+        /* Mobile (76.7rem - 32rem) */
+        @media screen and (max-width: 767px) {
+            margin-top: 0;
+            height: auto;
+
+        }
 
         &-overview{
             &--number{
@@ -52,12 +102,44 @@
         }
     }
 
-    &__img{
+    // &__img{
+    //     width: 94.2rem;
+    //     height: 50.2rem;
+    //     border-radius: .8rem;
+    //     margin-top: 3.3rem;
+    //     margin-left: 5rem;
+    // }
+
+    &__wrapper {
         width: 94.2rem;
         height: 50.2rem;
         border-radius: .8rem;
         margin-top: 3.3rem;
         margin-left: 5rem;
+        position: relative;
+        overflow: hidden; /* Mencegah gambar keluar dari wrapper */
+
+        @media screen and (max-width: 767px) {
+            width: 90%; /* Menggunakan persentase agar lebih fleksibel */
+            height: auto; /* Biarkan tinggi mengikuti aspek rasio */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        &-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Menjaga gambar tetap utuh dan memenuhi container */
+        }
+    }
+    
+
+    &__text{
+        /* Mobile (76.7rem - 32rem) */
+        @media screen and (max-width: 767px) {
+            font-size: 1.6rem;
+            line-height: 2.56rem;
+        }
     }
 }
 
