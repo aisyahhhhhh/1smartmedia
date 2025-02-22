@@ -438,8 +438,14 @@ body {
 
 .value {
   width: 100vw;
-  max-height: 126.4rem;
-  height: 100%;
+  min-height: 126.4rem;
+  height: 100vh;
+}
+@media screen and (max-width: 1200px) {
+  .value {
+    min-height: 84.5rem;
+    height: 100vh;
+  }
 }
 .value__bg {
   background-image: url(../img/values_bg.jpeg);
@@ -451,7 +457,7 @@ body {
   max-width: inherit;
   /* Mobile (76.7rem - 32rem) */
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .value__bg {
     min-height: 84.5rem;
     height: 100vh;
@@ -493,7 +499,7 @@ body {
   color: #ffffff;
   /* Mobile (76.7rem - 32rem) */
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .value__title {
     padding-top: 4.8rem;
   }
@@ -501,7 +507,7 @@ body {
 .value__title--mini {
   /* Mobile (76.7rem - 32rem) */
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .value__title--mini {
     font-size: 2rem;
     line-height: 2.64rem;
@@ -510,7 +516,7 @@ body {
 .value__title--core {
   /* Mobile (76.7rem - 32rem) */
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .value__title--core {
     font-size: 3.2rem;
     line-height: 4.24rem;
@@ -520,7 +526,7 @@ body {
   text-align: center;
   /* Mobile (76.7rem - 32rem) */
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .value__title--core span {
     font-size: 3.2rem;
     line-height: 4.24rem;
@@ -534,43 +540,59 @@ body {
 .box {
   display: flex;
   justify-content: space-between;
-  height: 100%;
-  /* Mobile (76.7rem - 32rem) */
+  height: 100vh;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .box {
-    justify-content: space-between;
     flex-direction: column;
-    align-items: center; /* Menjaga elemen tetap rata tengah */
-    max-height: 59.8rem;
+    align-items: center;
+    justify-content: flex-start;
   }
 }
 .box__grid, .box__grid-img {
   width: 100%;
   max-height: 60.7rem;
   max-width: 48rem;
-  /* Mobile (76.7rem - 32rem) */
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .box__grid, .box__grid-img {
-    max-height: 59.8rem;
-    max-width: 34.4rem;
+    max-height: 17.8rem;
+    max-width: 34.3rem;
   }
 }
 .box__grid {
   position: relative;
   margin-top: 10rem;
-  /* Mobile (76.7rem - 32rem) */
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .box__grid {
-    margin-top: 2rem; /* Mengurangi margin agar lebih rapat */
-    padding: 0 1.5rem;
+    margin-top: 4rem;
   }
 }
 .box__grid-2 {
   border-left: 1px solid rgb(194, 194, 194);
   border-right: 1px solid rgb(194, 194, 194);
+}
+@media screen and (max-width: 1200px) {
+  .box__grid-2 {
+    border-top: 1px solid rgb(194, 194, 194);
+    border-left: none;
+    border-right: none;
+  }
+}
+.box__grid-3 {
+  position: relative;
+}
+@media screen and (max-width: 1200px) {
+  .box__grid-3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10rem; /* Menggeser "outline" ke bawah */
+    height: 1px; /* Ketebalan outline */
+    background-color: rgb(194, 194, 194);
+  }
 }
 .box__grid-img {
   z-index: 0;
@@ -588,40 +610,31 @@ body {
   background: rgba(0, 0, 0, 0.56);
   z-index: 3;
 }
-@media screen and (max-width: 767px) {
-  .box__grid-img {
-    max-height: 17.8rem; /* Menyesuaikan tinggi gambar agar tetap proporsional */
-    max-width: 100%;
-  }
-}
 .box__grid-content {
   padding: 0 8rem;
   padding-top: 5rem;
   position: absolute;
   z-index: 10;
-  /* Mobile (76.7rem - 32rem) */
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .box__grid-content {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    padding-top: 0;
+    padding-top: 1rem;
+    padding: 0 1.2rem;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .box__grid-content--number {
     font-size: 1.6rem;
     line-height: 2.54rem;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .box__grid-content--heading {
     font-size: 2rem;
     line-height: 2.64rem;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .box__grid-content--text {
     font-size: 1.4rem;
     line-height: 2.24rem;
@@ -631,27 +644,25 @@ body {
   margin-top: 8rem;
   /* Mobile (76.7rem - 32rem) */
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .box__grid-content--1 {
     margin-top: 1rem;
   }
 }
 .box__grid-content--2 {
   margin-top: 15rem;
-  background-color: #0DA7A2;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .box__grid-content--2 {
     margin-top: 0;
   }
 }
 .box__grid-content--3 {
   margin-top: 20rem;
-  background-color: #0DA7A2;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .box__grid-content--3 {
-    margin-top: 0;
+    margin-top: 12rem;
   }
 }
 
