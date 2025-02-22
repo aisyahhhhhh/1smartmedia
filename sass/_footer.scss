@@ -1,6 +1,10 @@
 .footer{
     // width: 144rem;
     height: 60.4rem;
+
+    @media screen and (max-width: 767px) {
+        height: 48rem;
+    }
 }
 
 .nav{
@@ -8,44 +12,85 @@
     height: 15.4rem;
 
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5rem;
+
+    @media screen and (max-width: 450px) {
+        flex-direction: column;
+        height: auto;
+    }
+
+    @media screen and (max-width: 767px) {
+        height: 11.6rem;
+        padding-top: 4.8rem;
+        padding: 0;
+        padding-bottom: 2.4rem;
+    }
    
     &__link{
         color: rgba(97, 97, 97, 1);
         text-decoration: none; 
-            
-        &-about{
-            color: $color-primary-light;
+        // background-color: $color-primary;     
 
+        @media screen and (max-width: 767px) {
+            font-size: 2rem;
         }
     }
-    
+            
+    &__link-about{
+        color: $color-primary-light;
+        @media screen and (max-width: 767px) {
+            font-size: 2rem;
+        }
+    }
 
     &__item {
         position: relative;
         padding: 0 1rem;
+
+        // width: 50%; // Agar ada dua item per baris
+        text-align: center;
+        padding: 0.5rem 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            right: -20%;
+            transform: translateY(-50%);
+            height: 100%; // Sesuaikan tinggi garis
+            width: 1px;
+            background-color:rgba(224, 224, 224, 1);
+        }
+
+        &:last-child::after {
+            display: none; // Menghilangkan border pada elemen terakhir
+        }
+
     }
     
-    &__item:not(:last-child)::after {
-        content: "";
-        position: absolute;
-        right: -20%;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 1px;
-        height: 7.4rem;
-        background-color:rgba(224, 224, 224, 1)
-    }
+    // &__item:not(:last-child)::after {
+    //     content: "";
+    //     position: absolute;
+    //     right: -20%;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+    //     width: 1px;
+    //     height: 7.4rem;
+    //     background-color:rgba(224, 224, 224, 1)
+    // }
 }
 
 .contacts{
-    width: 144rem;
-    height: 34.4rem;
+    width: 100vw;
+    max-height: 34.4rem;
+    height: 100%;
     position: relative;
 
     &::before { 
@@ -73,13 +118,27 @@
         z-index: 3;
         position: relative;
         padding: 7.2rem 8rem;
+        
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            padding: 8rem 1.6rem;
+        }
 
         &-left{
-            width: 51.9rem;
-            height: 20rem;
+            max-width: 51.9rem;
+            max-height: 20rem;
+
+            @media screen and (max-width: 767px) {
+                margin-bottom: 1rem;
+            }
             p{
                 color:rgba(97, 97, 97, 1);
                 margin-bottom: 2rem;
+
+                @media screen and (max-width: 767px) {
+                    font-size: 1.4rem;
+                    line-height: 2.24rem;
+                }
             }
 
             &--text{
@@ -90,6 +149,19 @@
 
             }
         }
+
+        &-right{
+            @media screen and (max-width: 767px) {
+                margin-top: 3rem;
+            }
+        }
+    }
+}
+
+.logo{
+    @media screen and (max-width: 767px) {
+        width: 23.7rem;
+        height: 3.2rem;
     }
 }
 
@@ -123,16 +195,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
     letter-spacing: 0%;
-    color: peru;
-
+    // color: peru;
     border-top: 1px solid #E0E0E0;
+
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        padding: 2.4rem 1.6rem;
+        align-items: start;
+    }
+    
+    
     
     &__link{
         text-decoration: none;
         color: inherit;
+
     }
 
     &__right{

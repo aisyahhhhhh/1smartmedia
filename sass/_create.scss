@@ -1,6 +1,10 @@
 .create{
     position: relative;
     height: 63.8rem;
+    @media screen and (max-width: 767px) {
+        height: 27.1rem;
+    }
+    
 
     &::before { 
         content: "";
@@ -24,6 +28,11 @@
         position: absolute;
         top: 0;
         left: 0;
+
+        @media screen and (max-width: 767px) {
+            background-image: none;
+            background-color: $color-black;
+        }
     }
     
     &__bg::after {
@@ -50,9 +59,28 @@
         z-index: 2;
         color: $color-white;
 
+        @media screen and (max-width: 767px) {
+            max-width: 34.3rem;
+            max-height: 8.5rem;
+            gap: .5rem;
+
+        }
+
         span{
             line-height: 9.5rem;
             letter-spacing: -3%;
+
+            @media screen and (max-width: 767px) {
+                font-size: 3.2rem;
+                line-height: 4.224rem;
+            }
+        }
+
+        &-1{
+            @media screen and (max-width: 767px) {
+                font-size: 3.2rem;
+                line-height: 4.224rem;
+            }
         }
     }
 
@@ -72,6 +100,25 @@
 
         white-space: nowrap;
         overflow: hidden;
+
+        @media screen and (max-width: 767px) {
+            width: 19.5rem;
+            height: 5.8rem;
+        }
+
+        &-text{
+            @media screen and (max-width: 767px) {
+                font-size: 1.6rem;
+                line-height: 2.56rem;            
+            } 
+        }
+
+        &-icon{
+            @media screen and (max-width: 767px) {
+                min-width: 2rem;
+                min-height: 2rem;
+            } 
+        }
 
     }  
 }

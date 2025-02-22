@@ -1,5 +1,9 @@
 .branch{
     padding: 16rem 8rem;
+    @media screen and (max-width: 767px) {
+        padding: 4.8rem 1.6rem;
+    }
+    
     &__title{
         display: flex;
         flex-direction: column;
@@ -10,15 +14,43 @@
         height: 25.4rem;
         margin: 0 auto;
 
+        @media screen and (max-width: 1200px){
+            max-height: 20.8rem;
+            max-width: 60rem;
+            top: 1rem;
+        }
+
+        @media screen and (max-width: 767px){
+            max-height: 11.8rem;
+            max-width: 34.3rem;
+            top: 1.4rem;
+        }
+
             &-1{
                 line-height: 3.16rem;
                 letter-spacing: -3%;
                 display: flex;
-                justify-content: center;                    
+                justify-content: center; 
+                
+                @media screen and (max-width: 1200px) {
+                    font-size: 2.5rem;
+                }
+                
+                @media screen and (max-width: 767px) {
+                    font-size: 2rem;
+                    line-height: 2.64rem;
+                }
             }
 
             &-2{
                 text-align: center;
+                @media screen and (max-width: 1200px) {
+                    font-size: 4.5rem;
+                }
+                @media screen and (max-width: 767px) {
+                        font-size: 3.2rem;
+                        line-height: 4.224rem;
+                    }
                 span{
                     line-height: 9.5rem;
                     letter-spacing: -3%;
@@ -26,6 +58,18 @@
 
                     width: fit-content;
                     margin: auto;
+
+                    @media screen and (max-width: 1200px) {
+                        font-size: 4.5rem;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        font-size: 3.2rem;
+                        line-height: 4.224rem;
+                        font-family: $font-display;
+                        font-weight: 400;  
+                        font-style: normal;
+                    }
                 }
             }
     }
@@ -35,15 +79,33 @@
     display: flex;
     justify-content: space-between;
     margin-top: 5rem;
-
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+    }
 
     &__left{
+        @media screen and (max-width: 1200px) {
+            margin-bottom: 5rem;
+        }
         &-title{
             padding-bottom: 1.5rem;
+            
+            @media screen and (max-width: 767px) {
+                font-size: 2rem;
+                line-height: 2.64rem;
+                // padding-bottom: 0;
+
+            }
         }
         &-text{
             p{
                 padding-bottom: .2rem;
+                @media screen and (max-width: 767px) {
+                    font-size: 1.4rem;
+                    line-height: 2.24rem;
+                    // padding-bottom: 0;
+
+                }
 
             }
         }
@@ -51,8 +113,16 @@
 
     &__right{
         &-img{
-            Width: 95rem;
-            Height: 52.6rem;
+            height: 100%;
+            width: 100%;
+            max-width: 95rem;
+            max-height: 52.6rem;
+
+            // @media screen and (max-width: 767px) {
+            //     flex-direction: column;
+            //     max-width: 95rem;
+            //     max-height: 52.6rem;
+            // }
         }
     }
 }
