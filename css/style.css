@@ -200,11 +200,6 @@ body {
   background-color: #030303;
   position: relative;
 }
-@media screen and (max-width: 767px) {
-  .hero {
-    max-height: 55rem;
-  }
-}
 .hero::before {
   content: "";
   position: absolute;
@@ -215,6 +210,15 @@ body {
   background: url(../img/header-pattern.png) no-repeat center bottom;
   background-size: contain;
   z-index: 0;
+}
+@media screen and (max-width: 767px) {
+  .hero {
+    max-height: 56.8rem;
+  }
+  .hero::before {
+    background: url(../img/pattern-hero-hp.png) no-repeat center bottom;
+    background-size: contain;
+  }
 }
 
 .header {
@@ -694,8 +698,9 @@ body {
 @media screen and (max-width: 767px) {
   .branch__title {
     max-height: 11.8rem;
-    max-width: 34.3rem;
+    max-width: 34.5rem;
     top: 1.4rem;
+    margin: 0;
   }
 }
 .branch__title-1 {
@@ -773,6 +778,7 @@ body {
   .map__left-title {
     font-size: 2rem;
     line-height: 2.64rem;
+    padding-bottom: 0.5rem;
   }
 }
 .map__left-text p {
@@ -1000,6 +1006,11 @@ body {
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
   opacity: 40%;
+}
+@media screen and (max-width: 767px) {
+  .contacts::before {
+    background-image: none;
+  }
 }
 .contacts__grid {
   display: flex;

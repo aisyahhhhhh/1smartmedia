@@ -22,8 +22,10 @@
 
         @media screen and (max-width: 767px){
             max-height: 11.8rem;
-            max-width: 34.3rem;
+            max-width: 34.5rem;
             top: 1.4rem;
+            margin: 0;
+
         }
 
             &-1{
@@ -49,7 +51,7 @@
                 }
                 @media screen and (max-width: 767px) {
                         font-size: 3.2rem;
-                        line-height: 4.224rem;
+                        line-height: 4.224rem;                    
                     }
                 span{
                     line-height: 9.5rem;
@@ -93,8 +95,7 @@
             @media screen and (max-width: 767px) {
                 font-size: 2rem;
                 line-height: 2.64rem;
-                // padding-bottom: 0;
-
+                padding-bottom: .5rem;
             }
         }
         &-text{
