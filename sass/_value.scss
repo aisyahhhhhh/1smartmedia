@@ -202,7 +202,7 @@
             padding-top: 5rem;
             position: absolute;
             z-index: 10;
-
+            
             @media screen and (max-width: 1200px) {
                 padding-top: 1rem;
                 padding: 0 1.2rem;
@@ -226,6 +226,7 @@
             }
 
             &--text{
+    
                 @media screen and (max-width: 1200px) {
                     font-size: 1.4rem;
                     line-height: 2.24rem;

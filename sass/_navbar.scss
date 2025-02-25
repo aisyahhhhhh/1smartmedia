@@ -39,6 +39,11 @@
     gap: .8rem;
     // text-align: center;
 
+    @media screen and (min-width: 1800px) {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
     @media screen and (max-width: 767px) {
         display: none;
     }

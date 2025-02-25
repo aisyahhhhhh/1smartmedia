@@ -101,6 +101,13 @@
             &:not(:first-child) {
                 padding-top: 1rem;
             }
+
+            @media screen and (min-width: 1800px) {
+                font-size: 3.8rem;
+                line-height: 5rem;
+                // padding-bottom: 0;
+
+            }
             
             @media screen and (max-width: 767px) {
                 font-size: 2rem;
@@ -112,6 +119,13 @@
             p{
                 padding-bottom: .2rem;
                 color: rgba(97, 97, 97, 1);
+
+                @media screen and (min-width: 1800px) {
+                    font-size: 2rem;
+                    line-height: 2.24rem;
+                    // padding-bottom: 0;
+
+                }
                 @media screen and (max-width: 767px) {
                     font-size: 1.4rem;
                     line-height: 2.24rem;
