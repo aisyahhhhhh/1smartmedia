@@ -7,71 +7,63 @@
     }
 }
 
-.nav{
+.nav {
     width: 100%;
     height: 15.4rem;
 
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
-
-    display: flex;
     justify-content: space-between;
     align-items: center;
+    list-style: none;
     padding: 0 5rem;
+
+
+    &:last-child::after {
+        display: none;
+    }
+
+    @media screen and (max-width: 767px) {
+        height: 11.6rem;
+        padding: 4.8rem 1rem 2.4rem;
+    }
 
     @media screen and (max-width: 450px) {
         flex-direction: column;
         height: auto;
     }
 
-    @media screen and (max-width: 767px) {
-        height: 11.6rem;
-        padding-top: 4.8rem;
-        padding: 0 1rem;
-        padding-bottom: 2.4rem;
-    }
-   
-    &__link{
+    &__link {
         color: rgba(97, 97, 97, 1);
-        text-decoration: none; 
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
 
-        @media screen and (max-width: 767px) {
-            font-size: 2rem;
+        &:hover {
+            color: $color-primary-light;
         }
-    }
-            
-    &__link-about{
-        color: $color-primary-light;
+
         @media screen and (max-width: 767px) {
             font-size: 2rem;
         }
     }
 
     &__item {
-        position: relative;
-        padding: 0 1rem;
+        flex: 1; // Membuat semua item memiliki ukuran yang sama
         text-align: center;
-        padding: 0.5rem 0;
-
-        &::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: 50%;
-            right: -50%;
-            transform: translateY(-50%);
-            height: 100%;
-            width: 1px;
-            background-color:rgba(224, 224, 224, 1);
+        padding: 0.5rem 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid rgba(224, 224, 224, 1);
+        
+        &:last-child {
+            border-right: none;
         }
-
-        &:last-child::after {
-            display: none;
-        }
+        
 
     }
 }
+
 
 .contacts{
     width: 100vw;

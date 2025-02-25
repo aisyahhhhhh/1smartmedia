@@ -83,6 +83,11 @@
     display: flex;
     justify-content: space-between;
     margin-top: 5rem;
+
+    @media screen and (min-width: 1800px) {
+        justify-content: center;
+        gap: 30rem;
+    }
     @media screen and (max-width: 1200px) {
         flex-direction: column;
     }
@@ -92,7 +97,10 @@
             margin-bottom: 5rem;
         }
         &-title{
-            padding-bottom: 1.5rem;
+            padding-bottom: .5rem;
+            &:not(:first-child) {
+                padding-top: 1rem;
+            }
             
             @media screen and (max-width: 767px) {
                 font-size: 2rem;
@@ -103,6 +111,7 @@
         &-text{
             p{
                 padding-bottom: .2rem;
+                color: rgba(97, 97, 97, 1);
                 @media screen and (max-width: 767px) {
                     font-size: 1.4rem;
                     line-height: 2.24rem;
