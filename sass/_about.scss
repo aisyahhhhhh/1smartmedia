@@ -1,18 +1,34 @@
-.about{
+.about {
     height: auto;
     padding-bottom: 10rem;
     position: relative;
 
     &::before { 
         content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url("../img/about-pattern.png") no-repeat center bottom;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("../img/about-pattern.png") no-repeat center bottom;
+        background-size: contain;
+        z-index: 0;
+    }
+
+    /* Mobile (76.7rem - 32rem) */
+    @media screen and (max-width: 1199px) {
+        &::before {
+            background: none;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        &::before {
+            background: url("../img/pattern__about-mobile.png") no-repeat;
+            display: flex;
+            background-position: top right;
             background-size: contain;
-            z-index: 0;
+        }
     }
 
     &__title,
@@ -27,15 +43,18 @@
         padding: 0 8rem;
         padding-top: 16rem;
 
-
-        /* Mobile (76.7rem - 32rem) */
         @media screen and (max-width: 1199px) {
             margin-top: 4.8rem;
             padding: 0 1.6rem;
         }
 
+        @media screen and (max-width: 767px) {
+            padding-top: 4.8rem;
+            margin-top: 0;
+
+        }
+
         &-text{
-            /* Mobile (76.7rem - 32rem) */
             @media screen and (min-width: 1800px) {
                 margin-top: 5rem;
             }

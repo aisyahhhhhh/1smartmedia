@@ -515,6 +515,7 @@ body {
   height: auto;
   padding-bottom: 10rem;
   position: relative;
+  /* Mobile (76.7rem - 32rem) */
 }
 .about::before {
   content: "";
@@ -527,6 +528,19 @@ body {
   background-size: contain;
   z-index: 0;
 }
+@media screen and (max-width: 1199px) {
+  .about::before {
+    background: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about::before {
+    background: url("../img/pattern__about-mobile.png") no-repeat;
+    display: flex;
+    background-position: top right;
+    background-size: contain;
+  }
+}
 .about__title, .about__grid {
   position: relative;
   z-index: 1;
@@ -536,7 +550,6 @@ body {
   flex-direction: column;
   padding: 0 8rem;
   padding-top: 16rem;
-  /* Mobile (76.7rem - 32rem) */
 }
 @media screen and (max-width: 1199px) {
   .about__title {
@@ -544,8 +557,11 @@ body {
     padding: 0 1.6rem;
   }
 }
-.about__title-text {
-  /* Mobile (76.7rem - 32rem) */
+@media screen and (max-width: 767px) {
+  .about__title {
+    padding-top: 4.8rem;
+    margin-top: 0;
+  }
 }
 @media screen and (min-width: 1800px) {
   .about__title-text {
