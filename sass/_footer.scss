@@ -22,15 +22,16 @@
     &:last-child::after {
         display: none;
     }
-
+    
     @media screen and (max-width: 767px) {
         height: 11.6rem;
         padding: 4.8rem 1rem 2.4rem;
     }
 
     @media screen and (max-width: 450px) {
-        flex-direction: column;
+        // flex-direction: column;
         height: auto;
+
     }
 
     &__link {
@@ -41,13 +42,20 @@
         &:hover {
             color: $color-primary-light;
         }
+        // @media screen and (max-width: 1200px) {
+        //     font-size: 1rem;
+        // }
 
         @media screen and (max-width: 1270px) {
-            font-size: 5rem;
+            font-size: 4rem;
+        }
+
+        @media screen and (max-width: 1000px) {
+            font-size: 3rem;
         }
 
         @media screen and (max-width: 767px) {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
     }
 

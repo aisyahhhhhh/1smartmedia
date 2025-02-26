@@ -204,7 +204,6 @@ body {
   display: none;
 }
 
-/* Ketika aktif, menu ditampilkan */
 .menu.menu--active {
   display: flex;
   align-items: center;
@@ -222,6 +221,10 @@ body {
   width: 100vw;
   overflow: hidden;
   position: relative;
+  overflow-y: auto; /* Tambahkan scroll saat konten melebihi viewport */
+  position: relative;
+  scrollbar-width: thin; /* Untuk tampilan scrollbar lebih ramping */
+  scrollbar-color: rgba(255, 255, 255, 0.5) rgb(36, 36, 36); /* Warna scrollbar */
 }
 .menu::before {
   content: "";
@@ -236,6 +239,11 @@ body {
 @media (min-width: 1800px) {
   .menu::before {
     background: linear-gradient(to right, rgb(36, 36, 36) 75%, rgba(36, 36, 36, 0.95) 78%, rgba(36, 36, 36, 0.9) 85%, rgba(36, 36, 36, 0.85) 87%, rgba(36, 36, 36, 0.1) 100%);
+  }
+}
+@media (max-width: 767px) {
+  .menu::before {
+    background: rgb(36, 36, 36);
   }
 }
 .menu__bg {
@@ -272,6 +280,13 @@ body {
   justify-content: space-between;
   position: relative;
 }
+@media screen and (max-width: 767px) {
+  .navigation {
+    padding: 1.4rem 2rem;
+    margin-top: 1rem;
+    max-height: 5.8rem;
+  }
+}
 .navigation__icon {
   width: 3rem; /* Sesuaikan ukuran */
   height: 3rem;
@@ -284,17 +299,32 @@ body {
   z-index: 10;
   position: relative;
 }
+@media screen and (max-width: 767px) {
+  .navigation__icon {
+    width: 2rem; /* Sesuaikan ukuran */
+    height: 2rem;
+  }
+}
 
 .grid {
   display: flex;
   padding: 5rem 8rem;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .grid {
+    flex-direction: column;
+    padding: 2rem 4rem;
+  }
 }
 .grid__left {
   list-style: none;
   text-decoration: none;
   color: rgb(255, 255, 255);
-  height: 52.4rem;
-  width: 51rem;
+  height: 100%;
+  width: 100%;
+  max-height: 52.4rem;
+  max-width: 51rem;
 }
 .grid__left-link {
   display: flex;
@@ -305,22 +335,55 @@ body {
   padding-bottom: 2.4rem;
   border-bottom: 1px solid rgb(97, 97, 97);
 }
+@media screen and (max-width: 767px) {
+  .grid__left-link {
+    font-size: 2rem;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+    padding: 1rem;
+  }
+}
 .grid__right {
   padding-left: 10rem;
   padding-top: 2rem;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .grid__right {
+    padding-left: 0;
+  }
 }
 .grid__right-box {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
 }
+@media (max-width: 450px) {
+  .grid__right-box {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .grid__right-title {
   color: rgb(255, 255, 255);
   line-height: 4.224rem;
 }
+@media (max-width: 767px) {
+  .grid__right-title {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
 .grid__right-text {
   color: rgb(245, 245, 245);
   line-height: 2.56rem;
+}
+@media (max-width: 767px) {
+  .grid__right-text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
 }
 .grid__right-item {
   flex: 1 1 calc(50% - 10px);
@@ -329,6 +392,11 @@ body {
   flex-direction: column;
   gap: 10px;
   padding: 15px;
+}
+@media (max-width: 767px) {
+  .grid__right-item {
+    max-width: none;
+  }
 }
 .grid__right-contact {
   border: 1px solid rgb(255, 255, 255);
@@ -1166,7 +1234,6 @@ body {
 }
 @media screen and (max-width: 450px) {
   .nav {
-    flex-direction: column;
     height: auto;
   }
 }
@@ -1180,12 +1247,17 @@ body {
 }
 @media screen and (max-width: 1270px) {
   .nav__link {
-    font-size: 5rem;
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .nav__link {
+    font-size: 3rem;
   }
 }
 @media screen and (max-width: 767px) {
   .nav__link {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 .nav__item {
