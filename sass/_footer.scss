@@ -42,6 +42,10 @@
             color: $color-primary-light;
         }
 
+        @media screen and (max-width: 1270px) {
+            font-size: 5rem;
+        }
+
         @media screen and (max-width: 767px) {
             font-size: 2rem;
         }
