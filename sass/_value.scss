@@ -248,6 +248,7 @@
 
 
             &--number{
+                margin-bottom: 2.4rem;
                 @media screen and (max-width: 1199px) {
                     font-size: 1.6rem;
                     line-height: 2.56rem;
@@ -257,6 +258,8 @@
             }
 
             &--heading{
+                margin-bottom: 2rem;
+
                 @media screen and (max-width: 1199px) {
                     font-size: 2rem;
                     line-height: 2.64rem;
