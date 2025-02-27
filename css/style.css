@@ -1151,6 +1151,10 @@ body {
     margin-top: 3.2rem;
   }
 }
+.map__left {
+  width: 100%;
+  max-width: 24.8rem;
+}
 @media screen and (max-width: 1199px) {
   .map__left {
     margin: 3.2rem 0;
@@ -1176,7 +1180,7 @@ body {
   }
 }
 .map__left-text p {
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.8rem;
   color: rgb(97, 97, 97);
 }
 @media screen and (min-width: 1800px) {

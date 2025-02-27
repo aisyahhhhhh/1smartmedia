@@ -100,6 +100,8 @@
     }
 
     &__left{
+        width: 100%;
+        max-width: 24.8rem;
         @media screen and (max-width: 1199px) {
             margin: 3.2rem 0;
         }
@@ -124,8 +126,9 @@
         }
         &-text{
             p{
-                padding-bottom: .2rem;
+                padding-bottom: .8rem;
                 color: rgba(97, 97, 97, 1);
+                
 
                 @media screen and (min-width: 1800px) {
                     font-size: 2rem;
