@@ -816,6 +816,11 @@ body {
   background: url(../img/value-pattern.png) no-repeat center bottom;
   background-size: cover;
 }
+@media screen and (max-width: 767px) {
+  .value__bg::after {
+    background: none;
+  }
+}
 
 .value__title,
 .box {
