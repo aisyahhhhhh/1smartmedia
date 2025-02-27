@@ -183,7 +183,8 @@
                 height: auto;
                 display: block;
         
-                &:hover::before {
+                &:hover::before,
+                &:active::before {
                     content: "";
                     position: absolute;
                     top: 0;
@@ -192,7 +193,7 @@
                     height: 100%;
                     background: rgba(0, 0, 0, 0.56);
                     z-index: 4;
-                    transition: all .3s;
+                    transition: all .2s;
                 }
             }
         }
