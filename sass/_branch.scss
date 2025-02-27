@@ -1,6 +1,6 @@
 .branch{
     padding: 16rem 8rem;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1199px) {
         padding: 4.8rem 1.6rem;
     }
     
@@ -15,11 +15,14 @@
         width: 100%;
         height: 100%;
         margin: 0 auto;
+        gap: 3.2rem;
 
         @media screen and (max-width: 1199px){
             max-height: 20.8rem;
             max-width: 60rem;
             top: 1rem;
+            gap: .8rem;
+
         }
 
         @media screen and (max-width: 767px){
@@ -47,6 +50,7 @@
             }
 
             &-2{
+                line-height: 9.504rem;
                 text-align: center;
                 @media screen and (max-width: 1199px) {
                     font-size: 4.5rem;
@@ -82,7 +86,7 @@
 .map {
     display: flex;
     justify-content: space-between;
-    margin-top: 5rem;
+    margin-top: 7.2rem;
 
     @media screen and (min-width: 1800px) {
         justify-content: center;
@@ -90,11 +94,14 @@
     }
     @media screen and (max-width: 1199px) {
         flex-direction: column;
+        margin-top: 3.2rem;
+        // padding: 3.2rem 0;
+        
     }
 
     &__left{
         @media screen and (max-width: 1199px) {
-            margin-bottom: 5rem;
+            margin: 3.2rem 0;
         }
         &-title{
             padding-bottom: .5rem;

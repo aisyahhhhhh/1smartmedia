@@ -12,12 +12,15 @@
     height: 15.4rem;
 
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     list-style: none;
     padding: 0 5rem;
-
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin; 
 
     &:last-child::after {
         display: none;
@@ -29,22 +32,18 @@
     }
 
     @media screen and (max-width: 450px) {
-        // flex-direction: column;
         height: auto;
-
     }
 
     &__link {
         color: rgba(97, 97, 97, 1);
         text-decoration: none;
         transition: color 0.3s ease-in-out;
+        line-height: 7.392rem;
 
         &:hover {
             color: $color-primary-light;
         }
-        // @media screen and (max-width: 1200px) {
-        //     font-size: 1rem;
-        // }
 
         @media screen and (max-width: 1270px) {
             font-size: 4rem;
@@ -55,24 +54,25 @@
         }
 
         @media screen and (max-width: 767px) {
-            font-size: 1.5rem;
+            font-size: 2rem;
+            line-height: 2.64rem;
         }
     }
 
     &__item {
-        flex: 1; // Membuat semua item memiliki ukuran yang sama
+        // flex: 0 0 auto; 
+        flex: 1;
         text-align: center;
         padding: 0.5rem 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
         border-right: 1px solid rgba(224, 224, 224, 1);
+        min-width: max-content; 
         
         &:last-child {
             border-right: none;
         }
-        
-
     }
 }
 
@@ -118,7 +118,7 @@
         @media screen and (max-width: 767px) {
             flex-direction: column;
             padding: 0 1.6rem;
-            margin-top: 2rem;
+            margin-top: 2.4rem;
         }
 
         &-left{
@@ -148,6 +148,15 @@
                 height: 12rem;
                 gap: 1.6rem;
                 padding-top: 3rem;
+
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    max-width: 24.8rem;
+                    gap: .8rem;
+                    padding: 2.4rem 0;
+
+                    
+                }
 
             }
         }
