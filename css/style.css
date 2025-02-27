@@ -830,11 +830,17 @@ body {
   align-items: center;
   padding-top: 16rem;
   color: #ffffff;
+  gap: 3.2rem;
   /* Mobile (76.7rem - 32rem) */
 }
 @media screen and (max-width: 1199px) {
   .value__title {
     padding-top: 4.8rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .value__title {
+    gap: 0.8rem;
   }
 }
 .value__title--mini {

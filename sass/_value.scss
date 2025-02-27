@@ -65,10 +65,15 @@
     align-items: center;
     padding-top: 16rem;
     color: $color-white;
+    gap: 3.2rem;
     
     /* Mobile (76.7rem - 32rem) */
     @media screen and (max-width: 1199px) {
         padding-top: 4.8rem;
+    }
+
+    @media screen and (max-width: 767px) {
+        gap: .8rem;
     }
 
     &--mini{
@@ -76,6 +81,7 @@
         @media screen and (max-width: 1199px) {
             font-size: 2rem;
             line-height: 2.64rem;
+
         } 
     }
 
