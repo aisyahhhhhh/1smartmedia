@@ -481,7 +481,7 @@ body {
   position: absolute;
   top: 13.8rem;
   left: 50%;
-  transform: translateX(-50%); /* Hanya geser secara horizontal */
+  transform: translateX(-50%);
 }
 @media screen and (max-width: 767px) {
   .header {
@@ -544,7 +544,6 @@ body {
   height: auto;
   padding-bottom: 10rem;
   position: relative;
-  /* Mobile (76.7rem - 32rem) */
 }
 .about::before {
   content: "";
@@ -579,6 +578,7 @@ body {
   flex-direction: column;
   padding: 0 8rem;
   padding-top: 16rem;
+  gap: 3.2rem;
 }
 @media screen and (max-width: 1199px) {
   .about__title {
@@ -590,6 +590,7 @@ body {
   .about__title {
     padding-top: 4.8rem;
     margin-top: 0;
+    gap: 0;
   }
 }
 @media screen and (min-width: 1800px) {
@@ -678,22 +679,30 @@ body {
     width: auto;
   }
 }
+.about__paragraph-overview {
+  gap: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
 .about__paragraph-overview--number {
+  line-height: 8.736rem;
   /* Mobile (76.7rem - 32rem) */
   color: #0DA7A2;
 }
 @media screen and (max-width: 1340px) {
   .about__paragraph-overview--number {
     font-size: 4rem;
+    line-height: 9rem;
   }
 }
 @media screen and (max-width: 1199px) {
   .about__paragraph-overview--number {
     font-size: 2.4rem;
+    line-height: 3.168rem;
   }
   .about__paragraph-overview--number::after {
     content: "";
-    height: 2px;
+    height: 1px;
     width: auto;
     display: block;
     background-color: rgb(224, 224, 224);
@@ -720,12 +729,12 @@ body {
   margin-top: 3.3rem;
   margin-left: 5rem;
   position: relative;
-  overflow: hidden; /* Mencegah gambar keluar dari wrapper */
+  overflow: hidden;
 }
 @media screen and (max-width: 1199px) {
   .about__wrapper {
-    width: 90%; /* Menggunakan persentase agar lebih fleksibel */
-    height: auto; /* Biarkan tinggi mengikuti aspek rasio */
+    width: 90%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
   }
@@ -733,7 +742,7 @@ body {
 .about__wrapper-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Menjaga gambar tetap utuh dan memenuhi container */
+  object-fit: cover;
 }
 @media screen and (min-width: 1800px) {
   .about__title-text {
@@ -743,6 +752,7 @@ body {
   }
 }
 .about__text {
+  color: rgb(36, 36, 36);
   /* Mobile (76.7rem - 32rem) */
 }
 @media screen and (min-width: 1800px) {
@@ -754,6 +764,7 @@ body {
   .about__text {
     font-size: 1.6rem;
     line-height: 2.56rem;
+    color: rgb(97, 97, 97);
   }
 }
 
