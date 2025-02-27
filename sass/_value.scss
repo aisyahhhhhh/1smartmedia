@@ -252,7 +252,8 @@
             &--number{
                 @media screen and (max-width: 1199px) {
                     font-size: 1.6rem;
-                    line-height: 2.54rem;
+                    line-height: 2.56rem;
+                    margin-bottom: 1.2rem;
 
                 }
             }
@@ -261,6 +262,8 @@
                 @media screen and (max-width: 1199px) {
                     font-size: 2rem;
                     line-height: 2.64rem;
+                    margin-bottom: 1rem;
+
 
                 }
             }
