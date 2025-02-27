@@ -146,6 +146,9 @@ body {
   }
 }
 
+.nav {
+  z-index: 10;
+}
 .nav__logo {
   width: 20.77rem;
   height: 2.8rem;
@@ -462,7 +465,6 @@ body {
   }
   .hero::before {
     background: url(../img/pattern-hero-hp.png) no-repeat center bottom;
-    background-size: cover;
   }
 }
 
