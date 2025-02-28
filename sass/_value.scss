@@ -136,7 +136,10 @@
 
         @media screen and (max-width: 1199px) {
             max-height: 17.8rem;
+            height: auto;
             max-width: 34.3rem;
+            object-fit: cover;
+            // background-position: center;
         }
 
         
@@ -162,6 +165,13 @@
             background-position: center;
             opacity: 0;
             transition: opacity 0.3s ease;
+
+            &--2{
+                &:hover{
+                    opacity: 80%;
+
+                }
+            }
         }
 
         // Tampilkan gambar saat hover
@@ -216,6 +226,7 @@
                 display: block;
                 position: relative;
                 width: 100%;
+                
         
                 &:hover::before {
                     content: "";
