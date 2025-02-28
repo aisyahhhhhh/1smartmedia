@@ -141,8 +141,6 @@
             object-fit: cover;
             // background-position: center;
         }
-
-        
     }
 
     
@@ -169,12 +167,10 @@
             &--2{
                 &:hover{
                     opacity: 0.8;
-
                 }
             }
         }
 
-        // Tampilkan gambar saat hover
         &:hover &-img {
             opacity: 1;
 
@@ -227,32 +223,8 @@
                 position: relative;
                 width: 100%;
                 z-index: 1; 
-            
-            &:hover::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.56);
-                z-index: 4;
-            }
-        
-                // @media (hover: none) {
-                //     &::before {
-                //         content: "";
-                //         position: absolute;
-                //         top: 0;
-                //         left: 0;
-                //         width: 100%;
-                //         height: 100%;
-                //         background: rgba(0, 0, 0, 0.3); 
-                //         z-index: 4;
-                //     }
-                // }
-            }
         }
+    }
 
 
         &-content{
@@ -323,3 +295,17 @@
         }
     }
 }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.56);
+    opacity: 0;
+}
+
+.box__grid:hover .overlay {
+    opacity: 1;
+  }
