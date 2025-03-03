@@ -901,9 +901,7 @@ body.no-scroll {
   background-size: cover;
   background-position: center;
   opacity: 0;
-  opacity: 0;
-  visibility: visible;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 .box__grid-img--2:hover {
   opacity: 0.8;
@@ -1026,8 +1024,10 @@ body.no-scroll {
   height: 100%;
   background: rgba(0, 0, 0, 0.56);
   opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.1s ease-in-out;
+}
+
+.box__grid:hover .overlay {
+  opacity: 1;
 }
 
 .box__grid.active .overlay {
@@ -1038,11 +1038,6 @@ body.no-scroll {
 .box__grid.active .box__grid-img {
   opacity: 1;
   visibility: visible;
-}
-
-.box__grid-img--2:active,
-.box__grid-img--2.touch {
-  opacity: 0.8;
 }
 
 .branch {
@@ -1352,6 +1347,7 @@ body.no-scroll {
   .nav {
     height: 11.6rem;
     padding: 4.8rem 1rem 2.4rem;
+    max-width: 76.7rem;
   }
 }
 @media screen and (max-width: 450px) {
@@ -1405,7 +1401,7 @@ body.no-scroll {
 }
 @media screen and (max-width: 767px) {
   .nav__item {
-    padding: 0 2.5rem;
+    padding: 0 4.5rem;
   }
 }
 @media screen and (max-width: 450px) {
