@@ -162,11 +162,12 @@
             background-size: cover;
             background-position: center;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            // transition: opacity 0.3s ease;
 
             opacity: 0;
             visibility: visible;
             transition: opacity 0.3s ease, visibility 0.3s ease;
+            
         
 
             &--2{
@@ -310,8 +311,9 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.56);
     opacity: 0;
-    // transition: opacity 0.3s ease-in-out;
-    pointer-events: none; 
+    pointer-events: none;     
+    transition: opacity 0.1s ease-in-out;
+
 }
 
 .box__grid.active .overlay {
@@ -319,7 +321,7 @@
     pointer-events: auto; 
 }
 
-.box__grid.active .box__grid-img {
+.box__grid.active .box__grid-img  {
     opacity: 1;
     visibility: visible;
 }
