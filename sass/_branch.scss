@@ -95,16 +95,29 @@
     @media screen and (max-width: 1199px) {
         flex-direction: column;
         margin-top: 3.2rem;
+        display: flex;
+        align-items: center;
         // padding: 3.2rem 0;
         
     }
 
     &__left{
-        width: 100%;
-        max-width: 24.8rem;
+        width: auto;
+        // max-width: 24.8rem;
+        
         @media screen and (max-width: 1199px) {
             margin: 3.2rem 0;
+            display: flex;
+            // max-width: 100%;
+            flex-wrap: wrap;
         }
+        &-container{
+            max-width: 24.8rem;
+            
+            // flex: 1;
+        }
+
+        
         &-title{
             padding-bottom: .5rem;
             &:not(:first-child) {

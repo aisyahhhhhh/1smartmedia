@@ -29,6 +29,8 @@ html {
 body {
   font-family: "Satoshi", sans-serif;
   font-weight: 300;
+  overflow-x: hidden;
+  position: relative;
 }
 
 body.no-scroll {
@@ -742,21 +744,19 @@ body.no-scroll {
 
 .value {
   width: 100vw;
-  min-height: 126.4rem;
-  height: 100vh;
+  height: auto;
   overflow: hidden;
 }
 @media screen and (max-width: 1199px) {
   .value {
-    min-height: 84.5rem;
-    height: 100vh;
+    height: auto;
   }
 }
 .value__bg {
   background-image: url(../img/values_bg.jpeg);
   background-size: cover;
   position: relative;
-  height: 100%;
+  height: auto;
   width: 100%;
   max-width: inherit;
   background-position: center;
@@ -764,8 +764,6 @@ body.no-scroll {
 }
 @media screen and (max-width: 1199px) {
   .value__bg {
-    min-height: 84.5rem;
-    height: 100vh;
     background-size: cover;
   }
 }
@@ -852,6 +850,7 @@ body.no-scroll {
 .box {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 16rem;
 }
 @media screen and (min-width: 1800px) {
   .box {
@@ -864,6 +863,7 @@ body.no-scroll {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    padding-bottom: 5rem;
   }
 }
 .box__grid, .box__grid-img {
@@ -872,6 +872,14 @@ body.no-scroll {
   max-width: 48rem;
 }
 @media screen and (max-width: 1199px) {
+  .box__grid, .box__grid-img {
+    max-height: 22.8rem;
+    height: auto;
+    max-width: 50.3rem;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 767px) {
   .box__grid, .box__grid-img {
     max-height: 17.8rem;
     height: auto;
@@ -965,6 +973,12 @@ body.no-scroll {
 }
 @media screen and (max-width: 1199px) {
   .box__grid-content--number {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .box__grid-content--number {
     font-size: 1.6rem;
     line-height: 2.56rem;
     margin-bottom: 1.2rem;
@@ -975,12 +989,23 @@ body.no-scroll {
 }
 @media screen and (max-width: 1199px) {
   .box__grid-content--heading {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .box__grid-content--heading {
     font-size: 2rem;
     line-height: 2.64rem;
     margin-bottom: 1rem;
   }
 }
 @media screen and (max-width: 1199px) {
+  .box__grid-content--text {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (max-width: 767px) {
   .box__grid-content--text {
     font-size: 1.4rem;
     line-height: 2.24rem;
@@ -1142,16 +1167,22 @@ body.no-scroll {
   .map {
     flex-direction: column;
     margin-top: 3.2rem;
+    display: flex;
+    align-items: center;
   }
 }
 .map__left {
-  width: 100%;
-  max-width: 24.8rem;
+  width: auto;
 }
 @media screen and (max-width: 1199px) {
   .map__left {
     margin: 3.2rem 0;
+    display: flex;
+    flex-wrap: wrap;
   }
+}
+.map__left-container {
+  max-width: 24.8rem;
 }
 .map__left-title {
   padding-bottom: 0.5rem;
