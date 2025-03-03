@@ -408,25 +408,27 @@
     
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-        const menu = document.getElementById("menu");
-        const menuButton = document.getElementById("menuButton");
-        const closeButton = document.getElementById("close");
+            const menu = document.getElementById("menu");
+            const menuButton = document.getElementById("menuButton");
+            const closeButton = document.getElementById("close");
+            const body = document.body;
 
-        if (menuButton && menu) {
-            menuButton.addEventListener("click", (event) => {
-                event.preventDefault();
-                menu.classList.toggle("menu--active");
-            });
-        }
+            if (menuButton && menu) {
+                menuButton.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    menu.classList.toggle("menu--active");
+                    body.classList.toggle("no-scroll"); // Tambahkan atau hapus class untuk mencegah scroll
+                });
+            }
 
-        if (closeButton && menu) {
-            closeButton.addEventListener("click", (event) => {
-                event.preventDefault();
-                menu.classList.remove("menu--active"); // Hapus class, bukan ubah display
-            });
-        }
-    });
-
+            if (closeButton && menu) {
+                closeButton.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    menu.classList.remove("menu--active"); 
+                    body.classList.remove("no-scroll"); // Pastikan scroll kembali saat menu ditutup
+                });
+            }
+        });
     </script>
     
     

@@ -31,6 +31,13 @@ body {
   font-weight: 300;
 }
 
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+}
+
 .heading-6, .heading-5, .heading-4, .heading-3, .heading-2, .heading-1 {
   font-family: "Glacial Indifference", sans-serif;
 }
@@ -217,6 +224,7 @@ body {
 
 .menu {
   display: none;
+  position: fixed;
 }
 
 .menu.menu--active {
@@ -237,21 +245,12 @@ body {
   overflow: hidden;
   position: relative;
   overflow-y: auto;
-  position: relative;
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.5) rgb(36, 36, 36);
-}
-.menu__bg {
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
   background-image: url(../img/menu__bg.png);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .navigation,
@@ -1396,7 +1395,7 @@ body {
 }
 @media screen and (max-width: 450px) {
   .nav__item {
-    padding: 0 1.2rem;
+    padding: 0 1.5rem;
   }
 }
 
