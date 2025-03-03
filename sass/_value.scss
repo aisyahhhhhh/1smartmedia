@@ -310,20 +310,21 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.56);
     opacity: 0;
-
+    // transition: opacity 0.3s ease-in-out;
+    pointer-events: none; 
 }
 
-.box__grid:hover .overlay {
+.box__grid.active .overlay {
+    opacity: 1;
+    pointer-events: auto; 
+}
+
+.box__grid.active .box__grid-img {
     opacity: 1;
     visibility: visible;
-  }
+}
 
-// .box__grid.active .box__grid-img {
-//     opacity: 1;
-//     visibility: visible;
-// }
-
-// .box__grid-img--2:active,
-// .box__grid-img--2.touch {
-//     opacity: 0.8;
-// }
+.box__grid-img--2:active,
+.box__grid-img--2.touch {
+    opacity: 0.8;
+}

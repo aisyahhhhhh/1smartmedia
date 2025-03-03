@@ -408,29 +408,57 @@
     
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            // Menu Navigation
             const menu = document.getElementById("menu");
             const menuButton = document.getElementById("menuButton");
             const closeButton = document.getElementById("close");
             const body = document.body;
-
+    
             if (menuButton && menu) {
                 menuButton.addEventListener("click", (event) => {
                     event.preventDefault();
                     menu.classList.toggle("menu--active");
-                    body.classList.toggle("no-scroll"); // Tambahkan atau hapus class untuk mencegah scroll
+                    body.classList.toggle("no-scroll");
                 });
             }
-
+    
             if (closeButton && menu) {
                 closeButton.addEventListener("click", (event) => {
                     event.preventDefault();
-                    menu.classList.remove("menu--active"); 
-                    body.classList.remove("no-scroll"); // Pastikan scroll kembali saat menu ditutup
+                    menu.classList.remove("menu--active");
+                    body.classList.remove("no-scroll");
                 });
             }
+    
+            // Hover Effect in Mobile (Click to Show & Hide Overlay)
+            const gridItems = document.querySelectorAll(".box__grid");
+    
+            gridItems.forEach((item) => {
+                item.addEventListener("click", function (event) {
+                    event.stopPropagation();
+    
+                    gridItems.forEach((el) => el.classList.remove("active"));
+    
+                    this.classList.add("active");
+                });
+    
+                const overlay = item.querySelector(".overlay");
+                if (overlay) {
+                    overlay.addEventListener("click", function (event) {
+                        event.stopPropagation();
+                        item.classList.remove("active"); 
+                    });
+                }
+            });
+    
+            // Klik di luar elemen untuk menutup overlay
+            document.addEventListener("click", function (event) {
+                if (!event.target.closest(".box__grid")) {
+                    gridItems.forEach((item) => item.classList.remove("active"));
+                }
+            });
         });
     </script>
-    
     
     
      
