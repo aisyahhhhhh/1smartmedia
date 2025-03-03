@@ -813,10 +813,6 @@ body.no-scroll {
 @media screen and (max-width: 1199px) {
   .value__title {
     padding-top: 4.8rem;
-  }
-}
-@media screen and (max-width: 767px) {
-  .value__title {
     gap: 0.8rem;
   }
 }
@@ -1030,16 +1026,16 @@ body.no-scroll {
   opacity: 1;
 }
 
-.box__grid.active .overlay {
-  opacity: 1;
-  pointer-events: auto;
+@media screen and (max-width: 1199px) {
+  .box__grid.active .overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .box__grid.active .box__grid-img {
+    opacity: 1;
+    visibility: visible;
+  }
 }
-
-.box__grid.active .box__grid-img {
-  opacity: 1;
-  visibility: visible;
-}
-
 .branch {
   padding: 16rem 8rem;
 }
