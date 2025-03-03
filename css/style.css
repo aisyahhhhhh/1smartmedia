@@ -417,8 +417,8 @@ body.no-scroll {
 }
 
 .hero {
-  max-height: 80rem;
-  height: 100vh;
+  max-height: auto;
+  height: 80rem;
   width: 100vw;
   background-color: #030303;
   position: relative;
