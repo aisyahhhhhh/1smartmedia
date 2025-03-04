@@ -536,6 +536,9 @@ body.no-scroll {
   }
 }
 @media screen and (max-width: 767px) {
+  .about {
+    padding-bottom: 4.8rem;
+  }
   .about::before {
     background: url("../img/pattern__about-mobile.png") no-repeat;
     display: flex;
