@@ -1509,6 +1509,7 @@ body.no-scroll {
   .contacts__grid-left p {
     font-size: 1.4rem;
     line-height: 2.24rem;
+    margin-bottom: 1rem;
   }
 }
 .contacts__grid-left--text {
