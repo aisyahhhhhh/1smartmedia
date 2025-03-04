@@ -243,6 +243,7 @@
     align-items: center;
     letter-spacing: 0%;
     border-top: 1px solid #E0E0E0;
+    gap: 1.6rem;
 
 
     @media screen and (max-width: 767px) {
@@ -276,7 +277,10 @@
             display: flex;
             list-style: none;
             gap: 4rem;
+            @media screen and (max-width: 767px) {
+                gap: 2.4rem;
 
+            }
 
         }
 
