@@ -3,14 +3,22 @@
 
 @import "navbar";
 @import "menu";
-@import "hero";
-@import "header";
+@import "about-us-page/hero";
+@import "about-us-page/header";
 @import "about";
 @import "value";
-@import "branch";
-@import "create";
+@import "about-us-page/branch";
+@import "about-us-page/create";
 @import "footer";
 
+@import "landing-page/hero";
+@import "landing-page/header";
+@import "landing-page/service";
+@import "landing-page/industries";
+@import "landing-page/works";
+@import "landing-page/blog";
+@import "landing-page/testimonials";
+@import "landing-page/project";
 
 
 

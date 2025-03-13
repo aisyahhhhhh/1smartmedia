@@ -56,6 +56,10 @@
     }
 }
 
+.landing-page .value__bg::after{
+    display: none;
+}
+
 .value__title, 
 .box {
     position: relative;

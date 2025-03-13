@@ -67,6 +67,11 @@ $font-weights: (
     font-family: $font-primary;
     line-height: 2.24rem; 
 }
+.body-sm-regular{
+    font-size: map-get($font-sizes, "sm"); // Mengambil font size dari map
+    font-weight: map-get($font-weights, "regular"); // Mengambil font weight dari map
+    font-family: $font-primary;
+}
 .body-xl-bold {
     font-size: map-get($font-sizes, "xl"); // Mengambil font size dari map
     font-weight: map-get($font-weights, "bold"); // Mengambil font weight dari map
@@ -77,13 +82,19 @@ $font-weights: (
     font-size: map-get($font-sizes, "xl"); // Mengambil font size dari map
     font-weight: map-get($font-weights, "medium"); // Mengambil font weight dari map
     font-family: $font-primary;
-    line-height: 3.2rem;
+    // line-height: 3.2rem;
 }
 .body-xl-regular {
     font-size: map-get($font-sizes, "xl"); // Mengambil font size dari map
     font-weight: map-get($font-weights, "regular"); // Mengambil font weight dari map
     font-family: $font-primary;
-    line-height: 3.2rem;
+    // line-height: 3.2rem;
+}
+.body-big-bold {
+    font-size: map-get($font-sizes, "big"); // Mengambil font size dari map
+    font-weight: map-get($font-weights, "bold"); // Mengambil font weight dari map
+    font-family: $font-primary;
+    line-height: 3.84rem;
 }
 .body-big-regular {
     font-size: map-get($font-sizes, "big"); // Mengambil font size dari map
@@ -97,6 +108,11 @@ $font-weights: (
     font-family: $font-primary;
     line-height: 2.56rem;
     color: rgba(97, 97, 97, 1)
+}
+.body-md-medium {
+    font-size: map-get($font-sizes, "md"); // Mengambil font size dari map
+    font-weight: map-get($font-weights, "medium"); // Mengambil font weight dari map
+    font-family: $font-primary;
 }
 .body-md-bold {
     font-size: map-get($font-sizes, "md"); // Mengambil font size dari map
@@ -112,6 +128,7 @@ $font-weights: (
 $font-secondary: "Boska", sans-serif;
 
 $font-sizes-boska: (
+  "xl": 8.8rem,
   "lg": 8.2rem,
   "md": 7.2rem
 );
@@ -123,6 +140,12 @@ $font-weights: (
 );
 
 // Font styling
+.boska-xl-bold{
+    font-size: map-get($font-sizes-boska, "xl");
+    font-weight: map-get($font-weights, "bold");
+    font-family: $font-secondary;
+    font-style: italic;
+}
 .boska-lg-bold{
     font-size: map-get($font-sizes-boska, "lg");
     font-weight: map-get($font-weights, "bold");

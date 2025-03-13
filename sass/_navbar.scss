@@ -4,6 +4,8 @@
     justify-content: space-between;
     padding: 2.4rem 8rem;
 
+
+
     /* Mobile (76.7rem - 32rem) */
     @media screen and (max-width: 767px) {
     height: 8rem;
@@ -50,6 +52,11 @@
     padding: 1.2rem 2.4rem;
     gap: .8rem;
     // text-align: center;
+    .landing-page & {
+        color: $neutral-100;
+        border: 1px solid $neutral-100;
+
+    }
 
     @media screen and (min-width: 1800px) {
         font-size: 1.8rem;
@@ -84,3 +91,7 @@
     box-shadow: 0 0.8rem 0 #fff, 0 -0.8rem 0 #fff;
 }
 
+.landing-page .nav-btn::before {
+    background-color: $neutral-100;
+    box-shadow: 0 0.8rem 0 $neutral-100, 0 -0.8rem 0 $neutral-100;
+}
