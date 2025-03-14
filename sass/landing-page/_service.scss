@@ -51,6 +51,7 @@
 
             .works & {
                 color: $color-black;
+                
                 // margin-top: 8rem;
             }
 
@@ -198,9 +199,12 @@
         }
 
         &:hover .list__icon {
-            opacity: 1;
-            visibility: visible;
-            transition: opacity 0.3s ease-in-out;
+            @media screen and (max-width: 1199px) {
+                opacity: 1;
+                visibility: visible;
+                transition: opacity 0.3s ease-in-out;
+    
+            }
         }
 
         &-text{
