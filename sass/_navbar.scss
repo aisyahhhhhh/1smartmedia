@@ -52,6 +52,8 @@
     padding: 1.2rem 2.4rem;
     gap: .8rem;
     // text-align: center;
+    list-style: none;
+    text-decoration: none;
     .landing-page & {
         color: $neutral-100;
         border: 1px solid $neutral-100;
