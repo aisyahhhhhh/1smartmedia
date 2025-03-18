@@ -55,7 +55,11 @@
     .landing-page & {
         color: $neutral-100;
         border: 1px solid $neutral-100;
+    }
 
+    .contact-us &{
+        color: $neutral-100;
+        border: 1px solid $neutral-100;
     }
 
     @media screen and (min-width: 1800px) {
@@ -92,6 +96,11 @@
 }
 
 .landing-page .nav-btn::before {
+    background-color: $neutral-100;
+    box-shadow: 0 0.8rem 0 $neutral-100, 0 -0.8rem 0 $neutral-100;
+}
+
+.contact-us .nav-btn::before {
     background-color: $neutral-100;
     box-shadow: 0 0.8rem 0 $neutral-100, 0 -0.8rem 0 $neutral-100;
 }

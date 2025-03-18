@@ -150,6 +150,10 @@
 
     }
 
+    .contact-us & {
+        max-width: 62rem;
+    }
+
 
     &__list {
         width: calc(50% - 1.2rem); // Setiap form field mengambil setengah lebar dengan jarak antar elemen
@@ -160,9 +164,21 @@
 
         line-height: 160%;
 
+        .contact-us &{
+            gap: .8rem;
+            &-company{
+                width: 100%;
+            }
+        }
+
         @media screen and (max-width: 1199px) {
             width: 100%;
             font-size: 1.6rem;
+
+            .contact-us &{
+                font-size: 2rem;
+
+            }
         }
 
         &-grid{

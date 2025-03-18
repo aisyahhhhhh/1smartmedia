@@ -145,6 +145,11 @@
         //     padding-left: 2rem;
         // }
 
+        // .contact-us &{
+        //     padding-left: 0;
+        //     padding-top: 0;
+        // }
+
         @media (max-width: 1199px) {
             padding: 0 5rem;
             align-items: center;
@@ -156,6 +161,15 @@
         @media (max-width: 767px) {
             padding-left: 0;
             padding-top: 2rem;
+
+            // .contact-us &{
+            //     padding: 0;
+            //     justify-content: flex-start;
+            //     // max-height: 41.2rem;
+            //     // margin-top: 13rem;
+
+            // }
+
         }
         &-box{
             display: flex;
@@ -174,6 +188,10 @@
         &-title{
             color: rgba(255, 255, 255, 1);
             line-height: 4.224rem;
+
+            .contact-us &{
+                line-height: 132%;
+            }
 
             @media (max-width: 1199px) {
                 font-size: 2rem;
@@ -203,6 +221,17 @@
                 // flex: auto;
                 flex: 1 ;
 
+            }
+
+            @media (max-width: 767px) {
+
+    
+                // .contact-us &{
+                //     padding: 0;
+                //     // max-height: 41.2rem;
+    
+                // }
+    
             }
         }
 
