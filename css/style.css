@@ -463,6 +463,12 @@ body.no-scroll {
   color: rgb(255, 255, 255);
 }
 
+.kontak {
+  list-style: none;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
 .hero {
   max-height: auto;
   height: 80rem;
